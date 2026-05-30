@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>紫有協思寶庫 ✨</title>
+<title>紫有提示詞寶庫 ✨</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -499,7 +499,7 @@ body {
 /* ══════════════════════════════════════
    TYPE STRIP COLORS
 ══════════════════════════════════════ */
-.strip-協思 { background: linear-gradient(90deg, #a855f7, #ec4899); }
+.strip-提示詞 { background: linear-gradient(90deg, #a855f7, #ec4899); }
 .strip-協做 { background: linear-gradient(90deg, #10b981, #3b82f6); }
 .strip-助理 { background: linear-gradient(90deg, #f59e0b, #ef4444); }
 
@@ -675,7 +675,7 @@ body {
   <div class="navbar-inner">
     <a href="#" class="navbar-logo">
       <span class="logo-dot"></span>
-      紫有協思寶庫
+      紫有提示詞寶庫
     </a>
     <a class="navbar-link" href="https://docs.google.com/spreadsheets/d/13TpPIRN_Fk2Zt1LofU2ePdOP202BLSzFHpppMfW8mNs/edit?usp=sharing" target="_blank">
       📊 原始資料
@@ -687,7 +687,7 @@ body {
 <div class="wrapper">
   <div class="hero">
     <div class="hero-badge">✨ AI Prompt 精選集</div>
-    <h1>紫有<span class="grad">協思寶庫</span></h1>
+    <h1>紫有<span class="grad">提示詞寶庫</span></h1>
     <p>精選 AI 提示詞，讓你的工作更聰明、更有效率。點一下即可複製使用！</p>
     <div class="hero-stats" id="heroStats">
       <div class="stat-chip">📦 載入中…</div>
@@ -740,7 +740,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-  <p>紫有協思寶庫 · 資料來源 <a href="https://docs.google.com/spreadsheets/d/13TpPIRN_Fk2Zt1LofU2ePdOP202BLSzFHpppMfW8mNs/edit?usp=sharing" target="_blank">Google Sheet</a> · Made with 💜</p>
+  <p>紫有提示詞寶庫 · 資料來源 <a href="https://docs.google.com/spreadsheets/d/13TpPIRN_Fk2Zt1LofU2ePdOP202BLSzFHpppMfW8mNs/edit?usp=sharing" target="_blank">Google Sheet</a> · Made with 💜</p>
 </footer>
 
 <script>
@@ -751,7 +751,7 @@ const SHEET_ID = '13TpPIRN_Fk2Zt1LofU2ePdOP202BLSzFHpppMfW8mNs';
 const CSV_URL  = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
 
 const TYPE_META = {
-  'AI 協思': { emoji:'🧠', strip:'strip-協思' },
+  'AI 提示詞': { emoji:'🧠', strip:'strip-提示詞' },
   'AI 協做': { emoji:'🛠️', strip:'strip-協做' },
   'AI 助理': { emoji:'🤖', strip:'strip-助理' },
 };
@@ -894,11 +894,11 @@ function render() {
 
   let html = '';
   for (const [type, group] of Object.entries(groups)) {
-    const meta  = TYPE_META[type] || { emoji:'✨', strip:'strip-協思' };
+    const meta  = TYPE_META[type] || { emoji:'✨', strip:'strip-提示詞' };
     const short = type.replace('AI ', '');
     html += `
       <div class="section-heading">
-        <div class="section-heading-emoji" style="background:${short==='協思'?'#f5f3ff':short==='協做'?'#ecfdf5':'#fffbeb'}">${meta.emoji}</div>
+        <div class="section-heading-emoji" style="background:${short==='提示詞'?'#f5f3ff':short==='協做'?'#ecfdf5':'#fffbeb'}">${meta.emoji}</div>
         <div class="section-heading-text">${type}</div>
         <div class="section-heading-line"></div>
       </div>
